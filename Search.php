@@ -26,7 +26,7 @@ if (isset($_POST['register']))
             <div class="col-md-8">
             <div class="search">
                 <i class="fa fa-search cus-fa"></i>
-                <form class="example1" action="search.php">     
+                <form class="example1" action="Search.php">     
                     <input type="text" class="form-control" placeholder="Search..."  name="search">
                     <button class="btn btn-primary" name="btnSearch">Search</button>
                 </form>  
