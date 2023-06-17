@@ -70,7 +70,7 @@ Put your code right here
         ?>
         <div class="container">
             <h2 class="pt-3">Member Login</h2>
-            <form id="form1" name="form1" method="POST" action="actionLogin.php">
+            <form id="form1" name="form1" method="POST" action="index.php">
                 <p style="color:Orange"><?php echo $result ?? "" ?></p>
                 <form action=" actionLogin.php " method="POST">
                     <div class="row">
