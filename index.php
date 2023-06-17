@@ -59,7 +59,7 @@
         include_once 'header.php';
     ?>
     <div class="container">
-        <h2 style="text-align: center; ">Snack Shop</h2>
+        <h2 style="text-align: center; ">Toys Store</h2>
         <div class="row">
                 <div class="row d-flex justify-content-center align-items-center p-3">
                     <div class="col-md-8">
