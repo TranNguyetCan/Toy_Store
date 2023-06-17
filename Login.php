@@ -15,7 +15,7 @@
 
     <div class="container-fluid">
         <a href="https://www.facebook.com/nguyetcan.tran.357/" class="navbar-brand">
-            <img src="../simpleweb/images/123.jpg" alt="" width="120px" height="120px">
+            <img src="./images/logo.jpg" alt="" width="120px" height="120px">
         </a>
         <!-- thiết kế logo để quay lại trang chủ dùng "index.php"-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
