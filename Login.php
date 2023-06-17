@@ -47,7 +47,7 @@
                     setcookie("cc_id", $row['id'], time() + 3600);
                     $_SESSION['id'] =  $row['id'];
                     echo "Hello world";
-                    // header("Location: HomePage1.php");
+                    header("Location: index.php");
                 } else {
                     echo "Something wrong with your info<br>";
                 }
@@ -70,9 +70,9 @@ Put your code right here
         ?>
         <div class="container">
             <h2 class="pt-3">Member Login</h2>
-            <form id="form1" name="form1" method="POST" action="index.php">
+            <form id="form1" name="form1" method="POST" action="">
                 <p style="color:Orange"><?php echo $result ?? "" ?></p>
-                <form action=" index.php " method="POST">
+                <form action="" method="POST">
                     <div class="row">
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Email(*): </label>
