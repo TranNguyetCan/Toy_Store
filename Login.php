@@ -36,7 +36,7 @@
                 echo $email = $_POST['email'];
                 $c = new Connect();
                 $dblink = $c->connectToPDO();
-                $sql = "SELECT * FROM users WHERE email = ? and password = ?";
+                $sql = "SELECT * FROM staff WHERE email = ? and password = ?";
                 $stmt = $dblink->prepare($sql);
                 $re = $stmt->execute(array("$email", "$pass"));
                 $numrow = $stmt->rowCount();
@@ -72,7 +72,7 @@ Put your code right here
             <h2 class="pt-3">Member Login</h2>
             <form id="form1" name="form1" method="POST" action="">
                 <p style="color:Orange"><?php echo $result ?? "" ?></p>
-                <form action="index.php" method="POST">
+                <form action="" method="POST">
                     <div class="row">
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Email(*): </label>
