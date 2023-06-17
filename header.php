@@ -21,7 +21,7 @@
      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a href= "https://www.facebook.com/nguyetcan.tran.357/" class="navbar-brand">
-            <img src="../ASM2/images/logo.jpg" alt="" width="100px" height="100px">
+            <img src="../images/logo.jpg" alt="" width="100px" height="100px">
             </a>
             <!-- thiết kế logo để quay lại trang chủ dùng "index.php"-->
             <button class="navbar-toggler" type ="button" data-bs-toggle="collapse" 
