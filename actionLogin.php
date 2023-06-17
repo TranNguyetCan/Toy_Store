@@ -20,10 +20,12 @@
                     $_SESSION['id'] =  $row['id'];
                     echo $_SESSION['id'];
                     header("Location: index.php");
-                } else {
-                    echo "Something wrong with your info<br>";
-                }
-            } else {
-                echo "Please enter your info";
-            }
+            //     } else {
+            //         echo "Something wrong with your info<br>";
+            //     }
+            // } else {
+            //     echo "Please enter your info";
+            // }
         }
+    }
+}
