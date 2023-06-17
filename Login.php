@@ -72,7 +72,7 @@ Put your code right here
             <h2 class="pt-3">Member Login</h2>
             <form id="form1" name="form1" method="POST" action="">
                 <p style="color:Orange"><?php echo $result ?? "" ?></p>
-                <form action="" method="POST">
+                <form action="index.php" method="POST">
                     <div class="row">
                         <div class="form-group">
                             <label for="txtEmail" class="col-sm-2 control-label">Email(*): </label>
