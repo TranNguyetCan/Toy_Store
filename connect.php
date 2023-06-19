@@ -7,6 +7,11 @@ class Connect{
 
     public function __construct()
     {
+        // $this->server ="";
+        // $this->user ="root";
+        // $this->password ="";
+        // $this->dbName="store_trannguyetcan";
+
         $this->server ="frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
         $this->user ="uy5s3lg5vp4jxlea";
         $this->password ="li3lkodrs5r6b421";

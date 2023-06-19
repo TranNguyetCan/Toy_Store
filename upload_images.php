@@ -5,7 +5,7 @@ include_once 'connect.php';
 
 // echo $_SESSION['id'];
 if (isset($_POST['btnSubmit'])) {
-    echo $_SESSION['id'];
+    // echo $_SESSION['id'];
     $ID = $_POST['ID'];
     $Name = $_POST['Name'];
     $Price = $_POST['Price'];
@@ -26,7 +26,7 @@ if (isset($_POST['btnSubmit'])) {
         $re = $dblink->prepare($sql); //query con trỏ chuột ở vị trí đầu tiên //prepare trong tìm kiếm: chuẩn bị
         // $re->bindParam(':namep',$namep, PDO::PARAM_STR);
         // $re->execute();//Chỉ dùng cho bindParam
-        $stmt = $re->execute(array($ID, $Name, $Price, $Des, $staffID, $cid, $sid,"$img"));
+        $stmt = $re->execute(array($ID, $Name, $Price, $Des, $staffID, $cid, $sid, "$img"));
         if ($stmt == TRUE) {
             echo "Congrats!";
         } else {
@@ -39,7 +39,49 @@ if (isset($_POST['btnSubmit'])) {
     <form class="form form-vertical" method="POST" enctype="multipart/form-data"> <!--upload được file cần có enctype -->
         <div class="form-body">
             <div class="row">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        var delayTimer;
+                        $('#id_input').on('input', function() {
+                            clearTimeout(delayTimer);
+                            var id = $(this).val(); // Lấy giá trị ID từ input
+                            delayTimer = setTimeout(function() {
+                                $.ajax({
+                                url: 'checkid.php', // Tên tệp PHP xử lý kiểm tra ID
+                                method: 'POST',
+                                data: {id: id},
+                                success: function(response, status, xhr){
+                                    console.log(response);
+                                if(response == 'duplicate'){
+                                $('#error_message').text('ID already exists'); // Hiển thị thông báo lỗi
+                                } else {
+                                $('#error_message').text(''); // Xóa thông báo lỗi nếu ID hợp lệ
+                                }
+                                },
+                                error: function(reponse){
+                                    console.log("false cmnr");
+                                }
+                                });
 
+                                // if (id.length == 0) {
+                                //     console.log('Chua co eo gi');
+                                //     return;
+                                // } else {
+                                //     var xmlhttp = new XMLHttpRequest();
+                                //     xmlhttp.onreadystatechange = function() {
+                                //         if (this.readyState == 4 && this.status == 200) {
+                                //             document.getElementById("txtHint").innerHTML = this.responseText;
+                                //         }
+                                //     };
+                                //     xmlhttp.open("GET", "gethint.php?q=" + str, true);
+                                //     xmlhttp.send();
+                                // }
+
+                            }, 500); // Thời gian trễ (ms) trước khi gửi yêu cầu AJAX
+                        });
+                    });
+                </script>
                 <div class="col-12">
                     <div class="form-group">
                         <label for="image-vertical">Image</label>
@@ -48,7 +90,8 @@ if (isset($_POST['btnSubmit'])) {
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="ID" id="exampleFormControlInput1" placeholder="ID">
+                    <input type="text" class="form-control" name="ID" id="id_input" placeholder="ID">
+                    <div id="error_message"></div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -70,7 +113,7 @@ if (isset($_POST['btnSubmit'])) {
                     <label for="exampleFormControlInput1" class="form-label">Category</label>
                     <input type="text" class="form-control" name="Cat" id="exampleFormControlInput1" placeholder="Cat">
                 </div>
-                 <div class="mb-3">
+                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Supplier</label>
                     <input type="text" class="form-control" name="Sup" id="exampleFormControlInput1" placeholder="Sup">
                 </div>
