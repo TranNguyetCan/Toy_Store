@@ -48,36 +48,23 @@ if (isset($_POST['btnSubmit'])) {
                             var id = $(this).val(); // Lấy giá trị ID từ input
                             delayTimer = setTimeout(function() {
                                 $.ajax({
-                                url: 'checkid.php', // Tên tệp PHP xử lý kiểm tra ID
-                                method: 'POST',
-                                data: {id: id},
-                                success: function(response, status, xhr){
-                                    console.log(response);
-                                if(response == 'duplicate'){
-                                $('#error_message').text('ID already exists'); // Hiển thị thông báo lỗi
-                                } else {
-                                $('#error_message').text(''); // Xóa thông báo lỗi nếu ID hợp lệ
-                                }
-                                },
-                                error: function(reponse){
-                                    console.log("false cmnr");
-                                }
+                                    url: 'checkid.php', // Tên tệp PHP xử lý kiểm tra ID
+                                    method: 'POST',
+                                    data: {
+                                        id: id
+                                    },
+                                    success: function(response, status, xhr) {
+                                        console.log(response);
+                                        if (response == 'duplicate') {
+                                            $('#error_message').text('ID already exists'); // Hiển thị thông báo lỗi
+                                        } else {
+                                            $('#error_message').text(''); // Xóa thông báo lỗi nếu ID hợp lệ
+                                        }
+                                    },
+                                    error: function(reponse) {
+                                        console.log("false cmnr");
+                                    }
                                 });
-
-                                // if (id.length == 0) {
-                                //     console.log('Chua co eo gi');
-                                //     return;
-                                // } else {
-                                //     var xmlhttp = new XMLHttpRequest();
-                                //     xmlhttp.onreadystatechange = function() {
-                                //         if (this.readyState == 4 && this.status == 200) {
-                                //             document.getElementById("txtHint").innerHTML = this.responseText;
-                                //         }
-                                //     };
-                                //     xmlhttp.open("GET", "gethint.php?q=" + str, true);
-                                //     xmlhttp.send();
-                                // }
-
                             }, 500); // Thời gian trễ (ms) trước khi gửi yêu cầu AJAX
                         });
                     });
