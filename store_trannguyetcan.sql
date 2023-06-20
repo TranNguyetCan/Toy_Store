@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2023 at 03:32 AM
+-- Generation Time: Jun 20, 2023 at 04:13 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.16
 
@@ -173,7 +173,7 @@ INSERT INTO `toys` (`toyID`, `toyName`, `ToyPrice`, `Description`, `id`, `Cat_id
 ('C110', 'Bratz x Cult Gaia Special Edition Designer Cloe Fashion Doll', '$39', 'Bratz x Cult Gaia Special Edition Designer Cloe Fashion Doll', 1, 'C104', 'C12a', 'Bratz-x-Cult-Gaia-Special-Edition-Designer-Cloe-Fashion-Doll.jpg'),
 ('C112', 'Bratz Minis', '$8', 'Bratz Minis', 1, 'C105', 'C12a', 'Bratz-Minis.jpg'),
 ('C113', 'LOL Surprise Loves Mini Sweets Surprise-O-Matic Dolls', '$27', 'LOL Surprise Loves Mini Sweets Surprise-O-Matic Dolls', 1, 'C105', 'C12a', 'LOL-Surprise-Loves-Mini-Sweets-Surprise-O-Matic-Dolls.jpg'),
-
+('C117', 'Magic Mixies Magical Misting Crystal Ball', '$85', 'Bluey Ultimate Lights & Sounds Playhouse With Lucky', 1, 'C105', 'C12a', 'CoComelon-Boo-Boo-JJ-12”-Interactive-Light-up-Plush.jpg');
 
 --
 -- Indexes for dumped tables
