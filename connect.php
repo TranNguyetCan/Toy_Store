@@ -13,9 +13,9 @@ class Connect{
         // $this->dbName="store_trannguyetcan";
 
         $this->server ="frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-        $this->user ="n8xuy650nii4x7wh";
-        $this->password ="jyjnwk31mh6kt37x";
-        $this->dbName="p2dkypaq0j7o9q2l";
+        $this->user ="ed76ce6det1rm00t";
+        $this->password ="mgin2lyxta1mfje2";
+        $this->dbName="egolgj3soe6c0y6y";
     }
 
     //Option 1: use mysqli
