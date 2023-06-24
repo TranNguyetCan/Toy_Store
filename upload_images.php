@@ -3,9 +3,7 @@ session_start();
 include_once 'header.php';
 include_once 'connect.php';
 
-// echo $_SESSION['id'];
 if (isset($_POST['btnSubmit'])) {
-    // echo $_SESSION['id'];
     $ID = $_POST['ID'];
     $Name = $_POST['Name'];
     $Price = $_POST['Price'];
@@ -21,7 +19,8 @@ if (isset($_POST['btnSubmit'])) {
         $c = new Connect();
         $dblink = $c->connectToPDO(); //connectToMySQL();
         // $namep = $_GET['search'];//DÙng đối với PDO
-        $sql = "INSERT INTO `toys`(`toyID`, `toyName`, `ToyPrice`, `Description`, `id`, `Cat_id`, `supID`, `toyImages`) VALUES (?,?,?,?,?,?,?,?)"; //CONCAT('%',:namep,'%')'%..%' là thể hiện sự tìm kiếm
+        $sql = "INSERT INTO `toys`(`toyID`, `toyName`, `ToyPrice`, `Description`, `id`, `Cat_id`, `supID`, `toyImages`) 
+        VALUES (?,?,?,?,?,?,?,?)"; //CONCAT('%',:namep,'%')'%..%' là thể hiện sự tìm kiếm
         // <1>
         $re = $dblink->prepare($sql); //query con trỏ chuột ở vị trí đầu tiên //prepare trong tìm kiếm: chuẩn bị
         // $re->bindParam(':namep',$namep, PDO::PARAM_STR);
@@ -88,10 +87,6 @@ if (isset($_POST['btnSubmit'])) {
                     <label for="exampleFormControlInput1" class="form-label">Price</label>
                     <input type="text" class="form-control" name="Price" id="exampleFormControlInput1" placeholder="Price">
                 </div>
-                <!-- <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Status</label>
-                    <input type="text" class="form-control" name="Status" id="exampleFormControlInput1" placeholder="Status">
-                </div> -->
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Description</label>
                     <input type="text" class="form-control" name="Des" id="exampleFormControlInput1" placeholder="Des">
@@ -110,4 +105,4 @@ if (isset($_POST['btnSubmit'])) {
             </div>
         </div>
     </form>
-</div> <!--main-->
+</div>

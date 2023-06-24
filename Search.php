@@ -3,8 +3,7 @@ include_once 'header.php';
 ?>
 
 <?php
-if (isset($_POST['register']))
-{
+if (isset($_POST['register'])){
     $username = isset($_POST['username']) ? trim($_POST['username']) :'';
     $pass = isset($_POST['Pass']) ? trim($_POST['Pass']) :'';
     $password = isset($_POST['Password']) ? trim($_POST['Password']) :'';
