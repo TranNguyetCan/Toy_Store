@@ -12,10 +12,10 @@ class Connect{
         // $this->password ="";
         // $this->dbName="store_trannguyetcan";
 
-        $this->server ="xlf3ljx3beaucz9x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-        $this->user ="hi5hgyyx4owukupz";
-        $this->password ="kdfggsc722wfym9s";
-        $this->dbName="xjcjgstxx0gcpael";
+        $this->server ="co28d739i4m2sb7j.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $this->user ="k41awhpt53jxurqt";
+        $this->password ="tcb356l0jqxd10kp";
+        $this->dbName="k0rnjq54ikvjoaru";
     }
 
     //Option 1: use mysqli
